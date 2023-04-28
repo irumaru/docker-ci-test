@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       IMAGE: "gitlab-registry.maruru.me/ilts/docker-ci-test:${{ github.sha }}"
+    permissions:
+      contents: write
     steps:
       -
         name: Checkout
