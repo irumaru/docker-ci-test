@@ -43,5 +43,5 @@ jobs:
         with:
           title: "Update container image."
           body: "メインブランチが更新されたためコンテナイメージを作成しました。変更を適用します。"
-          base: "main"
+        #  base: "main"
         #  head: "feature-branch"
