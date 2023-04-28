@@ -38,13 +38,5 @@ jobs:
         with:
           cmd: yq '.spec.template.spec.containers[0].image = env(IMAGE)' -i ${{ env.WORK_DIR }}k8s/test.yaml
       -
-        name: Create Pull Request
-        uses: peter-evans/create-pull-request@v5
-        with:
-        #  token: ${{ secrets.PULL_REQUEST_TOKEN }}
-          commit-message: "Update container image."
-          title: "Update container image."
-          reviewers: "actions"
-        #  body: "メインブランチが更新されたためコンテナイメージを作成しました。変更を適用します。"
-        #  base: "main"
-        #  head: "feature-branch"
+        name: commit
+        uses: stefanzweifel/git-auto-commit-action@v4
