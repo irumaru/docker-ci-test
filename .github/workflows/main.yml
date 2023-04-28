@@ -41,8 +41,10 @@ jobs:
         name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
-          token: ${{ secrets.PULL_REQUEST_TOKEN }}
+        #  token: ${{ secrets.PULL_REQUEST_TOKEN }}
+          commit-message: "Update container image."
           title: "Update container image."
-          body: "メインブランチが更新されたためコンテナイメージを作成しました。変更を適用します。"
+          reviewers: "actions"
+        #  body: "メインブランチが更新されたためコンテナイメージを作成しました。変更を適用します。"
         #  base: "main"
         #  head: "feature-branch"
