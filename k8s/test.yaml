@@ -13,14 +13,14 @@ spec:
         app: citbot
     spec:
       containers:
-      - name: citbot
-        image: "gitlab-registry.maruru.me/nsslums/cit-bot:0.1.1"
-        env:
-        # auth
-        - name: TOKEN
-          valueFrom:
-            secretKeyRef:
-              name: bot-secret
-              key: duscord-token
+        - name: citbot
+          image: "gitlab-registry.maruru.me/ilts/docker-ci-test:ca2230d81514287295dcb3a4e5ba12330504421d"
+          env:
+            # auth
+            - name: TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: bot-secret
+                  key: duscord-token
       imagePullSecrets:
-      - name: gitlab-nsslums-citbot
+        - name: gitlab-nsslums-citbot
