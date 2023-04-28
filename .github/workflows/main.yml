@@ -39,7 +39,7 @@ jobs:
           cmd: yq '.spec.template.spec.containers[0].image = env(IMAGE)' -i ${{ env.WORK_DIR }}k8s/test.yaml
       -
         name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v5
         with:
           title: "Update container image."
           body: "メインブランチが更新されたためコンテナイメージを作成しました。変更を適用します。"
