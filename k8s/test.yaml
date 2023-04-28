@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: citbot
-          image: "gitlab-registry.maruru.me/ilts/docker-ci-test:ca2230d81514287295dcb3a4e5ba12330504421d"
+          image: "gitlab-registry.maruru.me/ilts/docker-ci-test:3f79bc95443fc94ca32bc4ababdca45cd47fa1e7"
           env:
             # auth
             - name: TOKEN
